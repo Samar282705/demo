@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="id" placeholder="ID">
+    <input type="text" id="fname" placeholder="Full Name">
+    <input type="text" id="age" placeholder="Age">
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="addData()">Submit</button>
+    <br>
+    <br>
+    <table border="" id="table">
+        <th colspan="5">Students Data</th>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <script>
+        function addData(){
+            let id = document.getElementById("id").value
+            let fname = document.getElementById("fname").value
+            let age = document.getElementById("age").value
+            let city = document.getElementById("city").value
+            let email = document.getElementById("email").value
+
+            document.getElementById("table").innerHTML += "<tr><td>" + id + "</td><td>" + fname + "</td><td>" + age + "</td><td>" + city + "</td><td>" + email + "</td></tr>";
+
+            document.getElementById("id").value = "";
+            document.getElementById("fname").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("city").value = "";
+            document.getElementById("email").value = "";
+        }
+    </script>
+</body>
+</html>

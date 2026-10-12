@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">ATM MACHINE</h1>
+    <br><br>
+    <div id="res"></div>
+    <script>
+        let correctpin = 123;
+        let balance = 105;
+        let pin = prompt("Enter Your Password");
+        while(pin != correctpin){
+            pin = prompt("Enter Your Password")
+        }
+        if(pin == correctpin){
+            let select = prompt("Choose any one \n 1. Account Details \n 2. Deposit \n 3. Widhdrwal");
+            if(select == 1){
+                document.getElementById("res").innerHTML = "Your Account name is USER01 <br> Your Account Password is 123 <br> Your balance is " + balance;
+            }
+            else if(select == 2){
+                let chose = +prompt("Enter the amount you want to deposite");
+                if(chose < 0){
+                    alert("can't deposite this value")
+                }
+                else{
+                    balance = chose + balance;
+                    document.getElementById("res").innerHTML = "Your Balance is " + balance;
+                }
+            }
+            else if(select == 3){
+                let wid = +prompt("Enter the amount you want to widhrwal")
+                if(wid < 0){
+                    alert("can't widthdwal this amount")
+                }
+                else if (wid > balance){
+                    alert("can't widthdwal this amount")
+
+                }
+                else{
+                    balance = wid - balance;
+                    document.getElementById("res").innerHTML = "Your Balance is " + balance;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

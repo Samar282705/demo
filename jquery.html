@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para" id="para">Lorem ipsum dolor sit amet.</p>
+    <button id="style">Style</button>
+    <!-- <button id="show">show</button> -->
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        // $ -> jquery
+        // $('selector').action -> syntax
+
+        // $('#para').click(function(){
+        //     $('#para').hide()
+        // })
+
+        // $('#btn').click(function(){
+        //     $('#para').hide()
+        // })
+
+        // $('#hide').click(function(){
+        //     $('#para').hide()
+        // })
+
+        // $('#show').click(function(){
+        //     $('#para').show()
+        // })
+
+        // $('#toggle').click(function(){
+        //     $('#para').toggle()
+        // })
+
+        // jQuery
+        // $('p').hide()
+        // $('p').text('<h1>Hello</h1>')
+        // $('p').css('background-color', 'blue')
+
+        // javaScript
+        // document.getElementById("para").innerHTML = "";
+        // document.getElementById("para").innerText = "<h1>Changed</h1>"
+        // document.getElementById("para").style.backgroundColor = "red"
+
+
+        $('#style').click(function(){
+            $('p').css('color', 'white')
+            $('p').css('background-color', 'black')
+            $('p').css('padding', '20px')
+            $('p').css('font-size', '30px')
+        })
+    </script>
+</body>
+</html>

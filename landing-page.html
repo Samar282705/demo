@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: rgb(216, 216, 216); */
+            padding: 20px 250px;
+        }
+        ul{
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        li a{
+            color: gray;
+            text-decoration: none;
+            /* padding: 20px; */
+        }
+        .heading{
+            font-weight: 200;
+            font-size: 28px;
+        }
+        .main{
+            padding: 80px 250px;
+            display: flex;
+            gap: 100px;
+            background-color: #1ABC9C;
+            color: white;
+        }
+        .head{
+            font-size: 50px;
+        }
+        .h2{
+            font-weight: 200;
+        }
+        .p1 hr{
+            border: 1px solid rgb(232, 232, 232);
+        }
+        .buy{
+            height: 50px;
+            width: 160px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #1ABC9C;
+            cursor: pointer;
+        }
+        .buy:hover{
+            background-color: #0e6957;
+            color: white;
+        }
+        .p1 a{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        fieldset{
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .fname, .lname{
+            width: 39%;
+        }
+        .email, .phone{
+            width: 89%;
+        }
+        .submit{
+            height: 35px;
+            width: 100px;
+            background-color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color: rgb(185, 185, 185);
+            color: white;
+        }
+        .pen{
+            color: #1ABC9C;
+        }
+        .second{
+            padding: 80px 250px;
+            text-align: center;
+        }
+        .second h1{
+            font-weight: lighter;
+            color: rgb(86, 86, 86);
+            font-size: 35px;
+            
+        }
+        .second p{
+            color: rgb(86, 86, 86);
+
+        }
+        .check{
+            height: 45px;
+            width: 220px;
+            background-color: rgb(32, 178, 235);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 17px;
+        }
+        .third{
+            padding: 80px 250px;
+            background-color: #01C6D6;
+            color: white;
+            display: flex;
+            gap: 50px;
+        }
+        .card{
+            text-align: center;
+        }
+        .border{
+            height: 100px;
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: 63px;
+        }
+        .border i{
+            margin-top: 22px;
+        }
+        .card h2{
+            font-weight: 100;
+
+        }
+        .card p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .fourth{
+            padding: 80px 250px;
+            text-align: center;
+        }
+        .fourth img{
+            margin-left: 20px;
+        }
+        .fourth h1{
+            font-weight: 200;
+        }
+        .fifth{
+            padding: 80px 250px;
+            background-color: #2ECC71;
+            color: white;
+            display: flex;
+        }
+        .fifth hr{
+            width: 30%;
+        }
+        .fifth .p1{
+            margin-top: 30px;
+        }
+        .fifth h1{
+            font-weight: 200;
+        }
+        .sixth{
+            padding: 80px 250px;
+            display: flex;
+        }
+        .sixth .p2{
+            margin-top: 150px;
+            margin-left: 40px;
+        }
+        .sixth h2{
+            font-weight: 200;
+        }
+        .sixth .download{
+            height: 70px;
+            width: 300px;
+            font-size: 19px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+            color: #1ABC9C;
+            font-weight: 700;
+            border-bottom: 3px solid #1ABC9C;
+            cursor: pointer;
+        }
+        .sixth .download:hover{
+            background-color: #1fd0ad;
+            color: white;
+        }
+        .seventh{
+            padding: 80px 250px;
+            background-color: #EC6F6D;
+            color: white;
+            display: flex;
+        }
+        .seventh .p2{
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        .seventh hr{
+            border: 1px solid white;
+            width: 30%;
+        }
+        .seventh h1{
+            font-weight: 200;
+        }
+        .eight{
+            padding: 80px 250px;
+        }
+        .eight small{
+            color: gray;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+        .eight hr{
+            border: 1px solid rgb(238, 237, 237);
+            margin: 20px 0px;
+        }
+        .cards1{
+            display: flex;
+        }
+        .card1 span{
+            font-weight: 200;
+            color: grey;
+            font-size: 17px;
+            
+        }
+        .card1 h2{
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .card1 p{
+            color: grey;
+            font-size: 14px;
+        }
+        .card1 i{
+            color: grey;
+            font-size: 25px;
+            
+        }
+        .nineth{
+            padding: 80px 250px;
+            background-color: #7F8C8D;
+        }
+        .nineth h1{
+            text-align: center;
+            color: white;
+            font-weight: 200;
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+        .tables{
+            display: flex;
+            gap: 30px;
+        }
+        .tables table{
+            background-color: white;
+            height: 500px;
+            width: 300px;
+            padding-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        table th{
+            background-color: rgb(245, 244, 244);
+            border-bottom: 1px solid rgb(211, 211, 211);
+            height: 45px;
+        }
+        table td{
+            padding: 10px;
+            border-bottom: 1px solid rgb(211, 211, 211); 
+            color: gray;
+            font-weight: 600;  
+        }
+        table .price{
+            font-size: 60px;
+            font-weight: 200;
+        }
+        table button{
+            height: 40px;
+            width: 130px;
+            border: none;
+            border-radius: 4px;
+            background-color: #1abc9c;
+            color: white;
+            font-size: 16px;
+        }
+        .tenth{
+            padding: 80px 250px;
+        }
+        .tenth small{
+            color: gray;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+        .tenth hr{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(244, 244, 244);
+        }
+        .tenth img{
+            margin-left: 10px;
+        }
+        .eleventh{
+            padding: 80px 250px;
+            text-align: center;
+            background-color: #34495E;
+            color: white;
+        }
+        .eleventh h1{
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+        .eleventh button{
+            height: 35px;
+            width: 120px;
+            border: none;
+            border-radius: 4px;
+            background-color: #428bca;
+            color: white;
+            font-weight: 600;
+        }
+        .thirteen{
+            padding: 50px 250px;
+            display: flex;
+            background-color: #1abc9c;
+            color: white;
+        }
+        .mail{
+            margin-left: 40px;
+        }
+        .thirteen .twitter{
+            margin-left: 200px;
+        }
+        .thirteen button{
+            height: 50px;
+            width: 50px;
+            margin-left: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: #1ABC9C;
+        }
+        .footer{
+            padding: 50px 250px;
+            text-align: center;
+        }
+        .footer a{
+            text-decoration: none;
+            color: #1ABC9C;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        .footer p{
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="heading"><i class="fa-solid fa-pen fa-sm pen"></i> SLANDER</h1>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="p1">
+            <h1 class="head">SLANDER <br> LANDING PAGE</h1>
+            <h2 class="h2">Smart bootstrap landing theme</h2>
+            <br>
+            <hr>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis elit nec sem laoreet tempor sit amet a quam. Maecenas commodo lorem ac turpis ornare lacinia.</p>
+            <br><br>
+            <button class="buy"><i class="fa-solid fa-bag-shopping"></i> BUY NOW</button>
+            <a href="">@LEARN MORE</a>
+        </div>
+        <div class="p2">
+            <fieldset>
+                <input type="text" placeholder="First Name" class="fname">
+                <input type="text" placeholder="Last Name" class="lname">
+                <input type="text" placeholder="Email Address" class="email">
+                <input type="text" placeholder="Phone" class="phone">
+                <input type="checkbox"> Lorem ipsum dolor sit amet.
+                <br><br>
+                <button class="submit">SUBMIT</button>
+            </fieldset>
+        </div>
+    </div>
+    <div class="second">
+        <h1>A Clean & Simple landing page for all type of websites</h1>
+        <br>
+        <p>Nullam quis elementum ligula. Sed neque neque, molestie eget nulla eu, hendrerit tincidunt magna. <br> Aliquam molestie lorem sed metus ornare luctus. Cras vel lectus libero.</p>
+        <br><br>
+        <button class="check">Check More Features</button>
+    </div>
+    <div class="third">
+        <div class="card">
+            <div class="border"><i class="fa-solid fa-desktop fa-3x"></i></div>
+            <br>
+            <h2>Responsive Design</h2>
+            <br>
+            <p>Sed dolor nisl, blandit nec lacus dignissim, sollicitudin elementum erat. Nulla viverra massa vitae diam aliquam ullamcorper.</p>
+        </div>
+        <div class="card">
+            <div class="border"><i class="fa-solid fa-rocket fa-3x"></i></div>
+            <br>
+            <h2>Responsive Design</h2>
+            <br>
+            <p>Sed dolor nisl, blandit nec lacus dignissim, sollicitudin elementum erat. Nulla viverra massa vitae diam aliquam ullamcorper.</p>
+        </div>
+        <div class="card">
+            <div class="border"><i class="fa-solid fa-code fa-3x"></i></div>
+            <br>
+            <h2>Responsive Design</h2>
+            <br>
+            <p>Sed dolor nisl, blandit nec lacus dignissim, sollicitudin elementum erat. Nulla viverra massa vitae diam aliquam ullamcorper.</p>
+        </div>
+        <div class="card">
+            <div class="border"><i class="fa-solid fa-people-group fa-3x"></i></div>
+            <br>
+            <h2>Responsive Design</h2>
+            <br>
+            <p>Sed dolor nisl, blandit nec lacus dignissim, sollicitudin elementum erat. Nulla viverra massa vitae diam aliquam ullamcorper.</p>
+        </div>
+    </div>
+    <div class="fourth">
+        <h1>Screenshots of the app</h1>
+        <br>
+        <img src="1.jpg" alt="" height="200">
+        <img src="2.jpg" alt="" height="200">
+        <img src="3.jpg" alt="" height="200">
+        <img src="1.jpg" alt="" height="200">
+    </div>
+    <div class="fifth">
+        <div class="p1">
+            <hr>
+            <br><br>
+            <h1>Resposive design for <br> all devices</h1>
+            <br><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis ante. Praesent gravida tempus suscipit. Praesent vel sem id ligula malesuada vehicula at id orci. In sem quam, semper id fringilla sed, sodales a ante. Ut molestie a lorem in luctus. Suspendisse dignissim leo quis purus mollis fermentum.</p>
+        </div>
+        <div class="p2">
+            <img src="fifth.jpg" alt="" height="400">
+        </div>
+    </div>
+    <div class="sixth">
+        <div class="p1">
+            <img src="sixth.png" alt="" height="600">
+        </div>
+        <div class="p2">
+            <h2>Iphone Version</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                <br><br>
+            Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing. Pellentesque quis tristique eros, sed rutrum mauris.</p>
+            <br><br>
+            <button class="download"><i class="fa-brands fa-apple fa-xl"></i> DOWNLOAD NOW</button>
+        </div>
+    </div>
+    <div class="seventh">
+        <div class="p1">
+            <img src="seventh.jpg" alt="">
+        </div>
+        <div class="p2">
+            <hr>
+            <br><br>
+            <h1>Cross browser ipsum <br> compatible</h1>
+            <br><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac facilisis ante. Praesent gravida tempus suscipit. Praesent vel sem id ligula malesuada vehicula at id orci. In sem quam, semper id fringilla sed, sodales a ante. Ut molestie a lorem in luctus.</p>
+        </div>
+    </div>
+    <div class="eight">
+        <h1><big>Our Team</big><small>Our people behind us</small></h1>
+        <hr>
+        <div class="cards1">
+            <div class="card1">
+                <img src="https://theme.express/slander/sland1/demo/team/1.jpg" alt="" height="200">
+                <h2>John Smith <span>Designer</span></h2>
+                <br>
+                <p>Fusce orci augue, porta a sapien dignissim laoreet gravida in nibh quis egestas.</p>
+                <br>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-linkedin"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-google-plus"></i>
+            </div>
+            <div class="card1">
+                <img src="https://theme.express/slander/sland1/demo/team/1.jpg" alt="" height="200">
+                <h2>John Smith <span>Designer</span></h2>
+                <br>
+                <p>Fusce orci augue, porta a sapien dignissim laoreet gravida in nibh quis egestas.</p>
+                <br>
+                <i class="fa-brands fa-square-facebook" ></i>
+                <i class="fa-brands fa-square-linkedin"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-google-plus"></i>
+            </div>
+            <div class="card1">
+                <img src="https://theme.express/slander/sland1/demo/team/1.jpg" alt="" height="200">
+                <h2>John Smith <span>Designer</span></h2>
+                <br>
+                <p>Fusce orci augue, porta a sapien dignissim laoreet gravida in nibh quis egestas.</p>
+                <br>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-linkedin"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-google-plus"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nineth">
+        <h1>Pricing Table</h1>
+        <div class="tables">
+            <table>
+                <tr>
+                    <th>Basic</th>
+                </tr>
+                <tr>
+                    <td class="price">$9<sup>99</sup></td>
+                </tr>
+                <tr>
+                    <td>5 Projects</td>
+                </tr>
+                <tr>
+                    <td>5 GB of Storage</td>
+                </tr>
+                <tr>
+                    <td>Up to 100 Users</td>
+                </tr>
+                <tr>
+                    <td>10 GB Bandwidth</td>
+                </tr>
+                <tr>
+                    <td>Security Suite</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>SignUp Now!</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Basic</th>
+                </tr>
+                <tr>
+                    <td class="price">$9<sup>99</sup></td>
+                </tr>
+                <tr>
+                    <td>5 Projects</td>
+                </tr>
+                <tr>
+                    <td>5 GB of Storage</td>
+                </tr>
+                <tr>
+                    <td>Up to 100 Users</td>
+                </tr>
+                <tr>
+                    <td>10 GB Bandwidth</td>
+                </tr>
+                <tr>
+                    <td>Security Suite</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>SignUp Now!</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Basic</th>
+                </tr>
+                <tr>
+                    <td class="price">$9<sup>99</sup></td>
+                </tr>
+                <tr>
+                    <td>5 Projects</td>
+                </tr>
+                <tr>
+                    <td>5 GB of Storage</td>
+                </tr>
+                <tr>
+                    <td>Up to 100 Users</td>
+                </tr>
+                <tr>
+                    <td>10 GB Bandwidth</td>
+                </tr>
+                <tr>
+                    <td>Security Suite</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>SignUp Now!</button>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Basic</th>
+                </tr>
+                <tr>
+                    <td class="price">$9<sup>99</sup></td>
+                </tr>
+                <tr>
+                    <td>5 Projects</td>
+                </tr>
+                <tr>
+                    <td>5 GB of Storage</td>
+                </tr>
+                <tr>
+                    <td>Up to 100 Users</td>
+                </tr>
+                <tr>
+                    <td>10 GB Bandwidth</td>
+                </tr>
+                <tr>
+                    <td>Security Suite</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>SignUp Now!</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tenth">
+        <h1><big>Our Clients </big> <small>whos behind us</small></h1>
+        <hr>
+        <img src="1.png" alt="" height="100">
+        <img src="2.png" alt="" height="100">
+        <img src="3.png" alt="" height="100">
+        <img src="4.png" alt="" height="100">
+        <img src="5.png" alt="" height="100">
+        <img src="6.png" alt="" height="100">
+    </div>
+    <div class="eleventh">
+        <h1>Like our product? Subscribe for Updates.</h1>
+        <input type="text" placeholder="Email Address">
+        <button><i class="fa-solid fa-envelope"></i> JOIN NOW</button>
+    </div>
+    <div class="twelth">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.4691792395374!2d66.9676682482355!3d24.916081837244153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3150070bc3d4d%3A0xa6bf1f000dc6b6f0!2sAptech%20Baldia%20Town!5e0!3m2!1sen!2s!4v1787901723031!5m2!1sen!2s" width="1580" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="thirteen">
+        <h1 class="call"><i class="fa-solid fa-phone"></i> +1800 1234 5678</h1>
+        <h1 class="mail"><i class="fa-solid fa-envelope"></i> info@website.com</h1>
+        <button class="twitter"><i class="fa-brands fa-twitter fa-xl"></i></button>
+        <button><i class="fa-solid fa-basketball fa-xl"></i></button>
+        <button><i class="fa-brands fa-linkedin fa-xl"></i></button>
+    </div>
+    <div class="footer">
+        <div>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+        <p>Copyright © Slander 2016. All Rights Reserved</p>
+    </div>
+</body>
+</html>

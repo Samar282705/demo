@@ -1,0 +1,49 @@
+html topics
+=> introduction of html
+=> introduction of css
+=> headings. h1, h6
+=> paragraphs , p
+=> title
+=> bold, italic ,underline, center 
+=> favicon
+=> link
+=> anchor
+=> mark, abbr,ins,del, sup,sub,address,city,blockqoute,q,hr,br
+=> button
+=> list ul li, ol li 
+=> Semantic Tags(header,footer,section,main)
+=> image
+=> comment
+=> a href 
+=> img src
+ => HTML SKIP
+=>  font awesome cdn (icon)
+
+CSS TOPIC
+=> Types, external, inline, Internal 
+ => inline <h1 style="color:#fff";>
+ => Internal <head> <style> </style> </head>
+ => external .css Alag se File banate hain
+
+ => kababCase
+
+selector{
+	property: value;
+
+} 
+
+PROPERTY 	   VALUE
+color              primary ,rgb,hexcode (colorhunt)
+background-color   primary ,rgb,hexcode (colorhunt)
+bacgkround-image   url("");
+background-size    cover
+bacgkround-position left,right,bottom
+background-reapeat : no-repeat
+border :            3px 4px 5px 10px dotted;
+width : 	    100%
+height :            100px
+font-family :        arial,
+font-weight         lighter,2px
+font-size            
+
+
